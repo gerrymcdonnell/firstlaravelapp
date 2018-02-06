@@ -20,7 +20,8 @@ Route::get('/', function () {
 //add crud for the controller
 Route::resource('posts','PostsController');
 
-
+//contact route
+Route::get('/contact','PostsController@contact');
 
 //posts
 //http://localhost/firstlaravelapp/public/posts/qq

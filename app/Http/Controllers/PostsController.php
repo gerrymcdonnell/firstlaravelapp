@@ -85,7 +85,7 @@ class PostsController extends Controller
     }
 
     //custom action
-    public function showmyview(){
+    public function contact(){
         return view('contact');
 
     }

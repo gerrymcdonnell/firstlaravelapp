@@ -11,17 +11,23 @@
 |
 */
 
-Route::get('/ged', function () {  
-    
+//default route setting
+Route::get('/', function () {    
+    return view('welcome');
+});
+
+
+//posts
+Route::get('/posts', 'PostsController@index');
+
+
+Route::get('/ged', function () {      
     //testing routes
     return 'hello ged';
 });
 
 
-//default route setting
-Route::get('/', function () {    
-    return view('welcome');
-});
+
 
 
 //i.e http://localhost/firstlaravelapp/public/post/2

@@ -20,6 +20,16 @@ Route::get('/', function () {
 });
 //************************************************************************* */
 
+//delete post with id 2
+Route::get('/delete', function () {   
+    
+    $post=Post::find(3);  
+    $post->delete();
+    //return $post;
+});
+
+
+
 //insert data
 Route::get('/basicinsert', function () {   
     
@@ -120,13 +130,13 @@ Route::get('/update', function () {
 
 
 //delete
-Route::get('/delete', function () {    
+/*Route::get('/delete', function () {    
     $deleted=DB::delete(
         'delete from posts where id=?',[1]
     );
 
     return $deleted;
-});
+});*/
 
 
 

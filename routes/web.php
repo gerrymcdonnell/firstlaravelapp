@@ -35,3 +35,12 @@ Route::get('/post/{id}/{name}', function ($id,$name) {
     return "this is post number ".$id. ' name = '.$name ;
 });
 
+//alias route
+//http://localhost/firstlaravelapp/public/admin/posts/example
+/*Route::get('admin/posts/example', array('as'=>'admin.home',function () {    
+    
+    $url=route('admin.home');
+
+    return 'this url is '.$url;
+}));*/
+

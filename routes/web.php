@@ -17,6 +17,12 @@ Route::get('/', function () {
 });
 //************************************************************************* */
 
+Route::get('/insert', function () {      
+    DB::insert('insert into posts(title,content) values (?,?)',['php with lara','best thing ever']);
+});
+
+
+
 //add crud for the controller
 //Route::resource('posts','PostsController');
 

@@ -27,6 +27,18 @@ Route::get('/basicinsert', function () {
 
     $post->title='nmy new title';
     $post->content='dsftgdfgdf';
+
+    $post->save();
+});
+
+//using save method to update
+Route::get('/basicupdate', function () {   
+    
+    $post=Post::find(2);
+
+    $post->title='my updated record';
+    $post->content='my updated record';
+    
     $post->save();
 });
 

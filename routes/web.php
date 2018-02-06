@@ -1,5 +1,8 @@
 <?php
 
+//use the post model
+use App\Post;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +19,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 //************************************************************************* */
+
+
+Route::get('/all', function () {    
+    $posts=Post::all();
+
+    foreach($posts as $post){
+        return $post->title;
+    }
+
+});
+
+
+//get id record 2
+Route::get('/find', function () {    
+    
+    $post=Post::find(2);   
+    return $post->title;       
+});
+
+
 
 //reading data
 Route::get('/read', function () {    

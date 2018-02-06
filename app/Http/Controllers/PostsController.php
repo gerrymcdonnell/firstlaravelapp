@@ -96,7 +96,9 @@ class PostsController extends Controller
         //return view('post')->with('id',$id);
 
         //for multiple params
-        return view('post',compact('id','name'));
+        return view('post',compact(
+            'id','name'
+        ));
     }
 
 }

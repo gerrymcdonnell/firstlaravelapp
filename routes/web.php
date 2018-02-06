@@ -17,9 +17,22 @@ Route::get('/', function () {
 });
 //************************************************************************* */
 
+//reading data
+Route::get('/read', function () {    
+    $results=DB::select('select * from posts where id=?',[1]);
+
+    foreach($results as $post){
+        return $post->title;
+    }
+});
+
+
+
 //add crud for the controller
 //Route::resource('posts','PostsController');
 
+/*
+//insert query
 Route::get('/insert', function () {      
     //DB::insert('insert into posts(title,content) values (?,?)',['php with lara','best thing ever']);
 
@@ -28,7 +41,7 @@ Route::get('/insert', function () {
         'content' => 'Laravel is the best thing to happen to PHP'
     ]);
 });
-
+*/
 
 
 

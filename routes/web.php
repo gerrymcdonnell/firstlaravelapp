@@ -20,6 +20,25 @@ Route::get('/', function () {
 });
 //************************************************************************* */
 
+//forcedelete
+Route::get('/forcedelete', function () {    
+    $post=Post::onlyTrashed()->where('id',3)->get();
+});
+
+
+//get trashed record
+Route::get('/forcedelete', function () {    
+
+    /*$post=Post::withTrashed()->where('id',3)->get();
+    return $post;*/
+
+    //ver 2 get all trashed
+    $post=Post::onlyTrashed()->forceDelete();
+    return $post;
+});
+
+
+
 //soft delete
 Route::get('/softdelete', function () {    
     $post=Post::find(3);  

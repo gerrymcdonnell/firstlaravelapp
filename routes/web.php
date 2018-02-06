@@ -10,14 +10,20 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//************************************************************************ */
 //default route setting
 Route::get('/', function () {    
     return view('welcome');
 });
+//************************************************************************* */
+
+//add crud for the controller
+Route::resource('posts','PostsController');
+
 
 
 //posts
+//http://localhost/firstlaravelapp/public/posts/qq
 Route::get('/posts/{v}', 'PostsController@index');
 
 

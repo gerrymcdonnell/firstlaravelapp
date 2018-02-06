@@ -17,14 +17,21 @@ Route::get('/', function () {
 });
 //************************************************************************* */
 
+//add crud for the controller
+//Route::resource('posts','PostsController');
+
 Route::get('/insert', function () {      
-    DB::insert('insert into posts(title,content) values (?,?)',['php with lara','best thing ever']);
+    //DB::insert('insert into posts(title,content) values (?,?)',['php with lara','best thing ever']);
+
+    DB::table('posts')->insert([
+        'title' => 'PHP with Laravel',
+        'content' => 'Laravel is the best thing to happen to PHP'
+    ]);
 });
 
 
 
-//add crud for the controller
-//Route::resource('posts','PostsController');
+
 
 //contact route
 Route::get('/contact','PostsController@contact');

@@ -20,6 +20,29 @@ Route::get('/', function () {
 });
 //************************************************************************* */
 
+//insert data
+Route::get('/basicinsert', function () {   
+    
+    $post=new Post;
+
+    $post->title='nmy new title';
+    $post->content='dsftgdfgdf';
+    $post->save();
+});
+
+
+
+//stoped here
+Route::get('/findmore', function () {   
+    
+    //$posts=Post::findorFail();
+    $posts=Post::where('users_count','<',50)->firstOrFail();
+
+    return $posts;
+});
+
+
+
 //find
 Route::get('/findwhere', function () {    
     $posts=Post::where('id',2)->orderBy('id','desc')->take(1)->get();

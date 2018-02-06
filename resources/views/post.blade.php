@@ -85,7 +85,9 @@
                 
                 
                 <div class="title m-b-md">
-                post {{$id}}
+                id: {{$id}}
+                <br>
+                name: {{$name}}
                 </div>
 
 

@@ -91,9 +91,12 @@ class PostsController extends Controller
     }
 
     //custom action
-    public function show_post($id){
+    public function show_post($id,$name){
         //pass data to view
-        return view('post')->with('id',$id);
+        //return view('post')->with('id',$id);
+
+        //for multiple params
+        return view('post',compact('id','name'));
     }
 
 }

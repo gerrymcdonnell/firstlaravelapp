@@ -25,7 +25,7 @@ Route::get('/contact','PostsController@contact');
 
 //posts
 //http://localhost/firstlaravelapp/public/posts/qq
-Route::get('/post/{id}', 'PostsController@show_post');
+Route::get('/post/{id}/{name}', 'PostsController@show_post');
 
 
 Route::get('/ged', function () {      

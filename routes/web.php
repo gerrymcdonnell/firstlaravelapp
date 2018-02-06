@@ -21,17 +21,44 @@ Route::get('/', function () {
 Route::get('/read', function () {    
     $results=DB::select('select * from posts where id=?',[1]);
 
+    //loop records
     foreach($results as $post){
         return $post->title;
     }
+
+    //var dump
+    //return var_dump($results);
+
+    return $results;
 });
+
+
+//update
+Route::get('/update', function () {    
+    $updated=DB::update(
+        'update posts set title="update title" where id=?',[1]
+    );
+
+    return $updated;
+});
+
+
+//delete
+Route::get('/delete', function () {    
+    $deleted=DB::delete(
+        'delete from posts where id=?',[1]
+    );
+
+    return $deleted;
+});
+
 
 
 
 //add crud for the controller
 //Route::resource('posts','PostsController');
 
-/*
+
 //insert query
 Route::get('/insert', function () {      
     //DB::insert('insert into posts(title,content) values (?,?)',['php with lara','best thing ever']);
@@ -41,7 +68,7 @@ Route::get('/insert', function () {
         'content' => 'Laravel is the best thing to happen to PHP'
     ]);
 });
-*/
+
 
 
 

@@ -20,7 +20,25 @@ Route::get('/', function () {
 });
 //************************************************************************* */
 
+//find
+Route::get('/findwhere', function () {    
+    $posts=Post::where('id',2)->orderBy('id','desc')->take(1)->get();
 
+    return $posts;
+
+});
+
+
+Route::get('/findwhere/{id}', function ($id) {    
+    $posts=Post::where('id',$id)->orderBy('id','desc')->take(1)->get();
+
+    return $posts;
+
+});
+
+
+
+//get all
 Route::get('/all', function () {    
     $posts=Post::all();
 

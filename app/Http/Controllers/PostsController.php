@@ -11,10 +11,10 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($v)
     {
         //
-        return "its working";
+        return "its working ".$v;
     }
 
     /**

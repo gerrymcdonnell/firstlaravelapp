@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 
 //posts
-Route::get('/posts', 'PostsController@index');
+Route::get('/posts/{v}', 'PostsController@index');
 
 
 Route::get('/ged', function () {      

@@ -18,14 +18,14 @@ Route::get('/', function () {
 //************************************************************************* */
 
 //add crud for the controller
-Route::resource('posts','PostsController');
+//Route::resource('posts','PostsController');
 
 //contact route
 Route::get('/contact','PostsController@contact');
 
 //posts
 //http://localhost/firstlaravelapp/public/posts/qq
-Route::get('/posts/{v}', 'PostsController@index');
+Route::get('/post/{id}', 'PostsController@show_post');
 
 
 Route::get('/ged', function () {      
@@ -38,7 +38,7 @@ Route::get('/ged', function () {
 
 
 //i.e http://localhost/firstlaravelapp/public/post/2
-Route::get('/post/{id}', function ($id) {    
+/*Route::get('/post/{id}', function ($id) {    
     return "this is post number ".$id;
 });
 
@@ -46,7 +46,7 @@ Route::get('/post/{id}', function ($id) {
 //http://localhost/firstlaravelapp/public/post/2/ted
 Route::get('/post/{id}/{name}', function ($id,$name) {    
     return "this is post number ".$id. ' name = '.$name ;
-});
+});*/
 
 //alias route
 //http://localhost/firstlaravelapp/public/admin/posts/example

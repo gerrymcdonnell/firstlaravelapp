@@ -90,4 +90,10 @@ class PostsController extends Controller
 
     }
 
+    //custom action
+    public function show_post($id){
+        //pass data to view
+        return view('post')->with('id',$id);
+    }
+
 }

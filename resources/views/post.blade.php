@@ -82,16 +82,13 @@
             @endif
 
             <div class="content">
+                
+                
                 <div class="title m-b-md">
-                My first contact page
+                post {{$id}}
                 </div>
 
-                <div class="links">
-                    <a href="/posts">posts</a>
-                    
-                    <a href="/contact">contact</a>
 
-                </div>
             </div>
             </div>
 

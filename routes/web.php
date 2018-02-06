@@ -20,12 +20,22 @@ Route::get('/', function () {
 });
 //************************************************************************* */
 
+//soft delete
+Route::get('/softdelete', function () {    
+    $post=Post::find(3);  
+    $post->delete();
+});
+
+
 //delete post with id 2
 Route::get('/delete', function () {   
     
     $post=Post::find(3);  
     $post->delete();
-    //return $post;
+    
+    //or
+    //$post->destroy(3);
+
 });
 
 

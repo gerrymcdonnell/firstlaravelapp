@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreatePostRequest;
 use Illuminate\Http\Request;
 use App\Post;
 
@@ -39,8 +40,8 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    //create post
-    public function store(Request $request)
+    //create post with simple validation
+    public function storeold(Request $request)
     {
         //validation rules, use pipe to add more
         $this->validate($request,[
@@ -48,11 +49,19 @@ class PostsController extends Controller
                 'content'=>'required'
             ]
         );
-
         //create post
         Post::create($request->all());
         return redirect('/posts');
     }
+
+    //use custom class to validate
+    public function store(CreatePostRequest $request)
+    {
+        //create post
+        Post::create($request->all());
+        return redirect('/posts');
+    }
+
 
     /**
      * Display the specified resource.

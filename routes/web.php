@@ -2,7 +2,7 @@
 
 //use the post model
 use App\Post;
-
+use App\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,8 +20,16 @@ Route::get('/', function () {
 });
 //************************************************************************* */
 
+//realtaionships
+//http://laravel.app1/user/1/post
+Route::get('/user/{id}/post', function ($id) {
+    return User::find($id)->post;
+});
+
+
+
 //forcedelete
-Route::get('/forcedelete', function () {    
+Route::get('/forcedelete', function () {
     $post=Post::onlyTrashed()->where('id',3)->get();
 });
 

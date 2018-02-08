@@ -15,7 +15,10 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-			
+
+            //foreign ket for relkationship
+			$table->integer('user_id')->unsigned();
+
 			$table->string('title', 255);
             $table->string('content', 255);
 			

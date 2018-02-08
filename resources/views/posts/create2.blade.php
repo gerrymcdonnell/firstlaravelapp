@@ -16,6 +16,7 @@
 
 Add Post v2 (using Laravel collective package)
 
+
 {{--open form--}}
 {!! Form::open([
     'method'=>'post',
@@ -37,13 +38,15 @@ Add Post v2 (using Laravel collective package)
 
    {{ csrf_field() }}
 
-   {!! Form::submit('Create Post',['class'=>'btn btn-primary']) !!}
+    <div class="form-group">
+        {!! Form::submit('Create Post',['class'=>'btn btn-primary']) !!}
+    </div>
 
    {{--<button type="submit" class="btn btn-primary">Submit</button>--}}
 
 
 {!! Form::close() !!}
-
+<p></p>
 @if(count($errors)>0)
 <div class="alert alert-danger">
     <ul>

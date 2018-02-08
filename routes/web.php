@@ -15,10 +15,13 @@ use App\User;
 */
 //************************************************************************ */
 //default route setting
-Route::get('/', function () {    
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 //************************************************************************* */
+
+
+Route::resource('/', 'PostsController');
 
 Route::get('/demo', function () {
     return view('demo');

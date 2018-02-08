@@ -15,16 +15,18 @@
 @section('content')
 
 
-    <form method="post" action="/posts">
+    <form method="post" action="/posts/{{$post->id}}">
+
+        <input type="hidden" name="_method" value="PUT">
 
         <div class="form-group">
             <label for="exampleInputEmail1">Title</label>
-             <input type="text" class="form-control"  name="title" placeholder="enter title">
+             <input type="text" class="form-control"  name="title" placeholder="enter title" value="{{$post->title}}">
         </div>
 
         <div class="form-group">
             <label for="content">Content</label>
-             <input type="text" class="form-control"  name="content" placeholder="enter content">
+             <input type="text" class="form-control"  name="content" placeholder="enter content" value="{{$post->content}}">
         </div>
 
 

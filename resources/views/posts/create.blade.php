@@ -5,6 +5,7 @@
 
 @section('content')
 
+Add Post
 
     <form method="post" action="/posts">
 

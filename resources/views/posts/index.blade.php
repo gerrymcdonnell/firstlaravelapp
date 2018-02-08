@@ -34,12 +34,22 @@
 
 
             <td>
-                <!--browser only recognises post and get -->
-                <form method="post" action="/posts/{{$post->id}}">
+                <!--1 way to delete browser only recognises post and get -->
+               {{-- <form method="post" action="/posts/{{$post->id}}">
                     <input type="hidden" name="_method" value="delete">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <button type="submit" class="btn btn-primary">Delete</button>
-                </form>
+                </form>--}}
+
+                <!--2nd way to delete -->
+                {!! Form::open([
+                'method'=>'delete',
+                'action'=>['PostsController@destroy',$post->id]]) !!}
+
+                {!! Form::submit('delete Post',['class'=>'btn btn-danger']) !!}
+
+                {!! Form::close() !!}
+
             </td>
 
         </tr>

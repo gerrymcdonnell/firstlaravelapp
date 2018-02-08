@@ -28,7 +28,13 @@
             </a>
             </td>
             <td>{{$post->content}}</td>
-            <td>{{$post->path}}</td>
+
+            <!-- file upload path -->
+            <td>
+                <img height="50" src="{{$post->path}}">
+            </td>
+
+
             <td>{{$post->created_at}}</td>
             <td>{{$post->updated_at}}</td>
 
@@ -48,7 +54,7 @@
                 'method'=>'delete',
                 'action'=>['PostsController@destroy',$post->id]]) !!}
 
-                {!! Form::submit('delete Post',['class'=>'btn btn-danger']) !!}
+                {!! Form::submit('delete',['class'=>'btn btn-danger']) !!}
 
                 {!! Form::close() !!}
 

@@ -12,9 +12,17 @@ class Post extends Model
     //do softdelete
     //use SoftDeletes;
 
+    //upload folder
+    public $dir="/images/";
+
     protected $dates=['deleted_at'];
 
     protected $fillable=[
         'title','content','path'
     ];
+
+    //get then columnname
+    public function getPathAttribute($value){
+        return $this->dir.$value;
+    }
 }

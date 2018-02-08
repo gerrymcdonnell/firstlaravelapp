@@ -34,8 +34,15 @@
 
        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-       <button type="submit" class="btn btn-primary">Submit</button>
+       <button type="submit" class="btn btn-primary">Update</button>
 
+    </form>
+<hr>
+    Delete
+    <form method="post" action="/posts/{{$post->id}}">
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <button type="submit" class="btn btn-primary">Delete</button>
     </form>
 
 @endsection

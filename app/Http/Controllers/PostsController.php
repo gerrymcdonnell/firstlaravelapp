@@ -92,9 +92,13 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //Delete fucntion
     public function destroy($id)
     {
         //
+        $post=Post::find($id);
+        $post->delete();
+        return redirect('/posts');
     }
 
     //custom action

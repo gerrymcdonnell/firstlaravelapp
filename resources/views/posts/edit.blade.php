@@ -20,7 +20,7 @@
         <input type="hidden" name="_method" value="PUT">
 
         <div class="form-group">
-            <label for="exampleInputEmail1">Title</label>
+            <label for="title">Title</label>
              <input type="text" class="form-control"  name="title" placeholder="enter title" value="{{$post->title}}">
         </div>
 

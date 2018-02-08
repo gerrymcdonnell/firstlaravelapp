@@ -20,6 +20,13 @@ Route::get('/', function () {
 });
 //************************************************************************* */
 
+//crud use a resource
+Route::resource('/posts', 'PostsController');
+
+
+
+
+
 //realtaionships
 //http://laravel.app1/user/1/post
 Route::get('/user/{id}/post', function ($id) {

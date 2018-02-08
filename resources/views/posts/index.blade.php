@@ -11,6 +11,7 @@
       <th>updated</th>
       <th></th>
       <th></th>
+
     </tr>
   </thead>
   <tbody>
@@ -30,7 +31,16 @@
             <td>{{$post->updated_at}}</td>
 
             <td><a href="{{route('posts.edit',$post->id)}}">Edit </a></td>
-            <td><a href="{{route('posts.edit',$post->id)}}">Delete </a></td>
+
+
+            <td>
+                <!--browser only recognises post and get -->
+                <form method="post" action="/posts/{{$post->id}}">
+                    <input type="hidden" name="_method" value="delete">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                </form>
+            </td>
 
         </tr>
 
@@ -38,6 +48,9 @@
 
   </tbody>
 </table>
+
+
+
 
 @endsection
 

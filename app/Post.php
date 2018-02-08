@@ -9,7 +9,8 @@ class Post extends Model
 {
     //called posts in laravel
 
-    use SoftDeletes;
+    //do softdelete
+    //use SoftDeletes;
 
     protected $dates=['deleted_at'];
 

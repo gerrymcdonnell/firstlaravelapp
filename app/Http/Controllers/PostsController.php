@@ -42,8 +42,12 @@ class PostsController extends Controller
     //create post
     public function store(Request $request)
     {
-        //tretrn all inputs
-        //return $request->all();
+        //validation rules, use pipe to add more
+        $this->validate($request,[
+                'title'=>'required|max:30',
+                'content'=>'required'
+            ]
+        );
 
         //create post
         Post::create($request->all());

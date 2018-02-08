@@ -1,8 +1,4 @@
 @extends('layout.mainlayout2')
-
-
-
-
 @section('content')
 
 <table class="table">
@@ -15,20 +11,22 @@
     </tr>
   </thead>
   <tbody>
-<?php
-    foreach($posts as $post){
 
-    echo "<tr>  <th scope='row'>$post->id</th>";
-          echo "<td>$post->title</td>";
-           echo "<td>$post->content</td>";
-           echo '<td><button type="submit" class="btn btn-primary">edit</button></td>';
-           echo '<td><button type="submit" class="btn btn-primary">delete</button></td>';
-    echo "</tr>";
-    }
+    @foreach($posts as $post)
 
-?>
+        <tr>
+        <th scope='row'>{{$post->id}} </th>
+            <td>{{$post->title}}</td>
+            <td>{{$post->content}}</td>
+        </tr>
+
+    @endforeach
+
   </tbody>
 </table>
+
 @endsection
+
+
 
 

@@ -10,7 +10,7 @@
 
 
 
-        @yield('header')
+    @yield('header')
 
     <div class="container">
      @yield('content')

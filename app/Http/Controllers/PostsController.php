@@ -39,6 +39,7 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    //create post
     public function store(Request $request)
     {
         //tretrn all inputs
@@ -46,6 +47,7 @@ class PostsController extends Controller
 
         //create post
         Post::create($request->all());
+        return redirect('/posts');
     }
 
     /**

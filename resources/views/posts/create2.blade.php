@@ -18,8 +18,8 @@ Add Post v2 (using Laravel collective package)
 
 {{--open form--}}
 {!! Form::open([
-'method'=>'post',
-'action'=>'PostsController@store'
+    'method'=>'post',
+    'action'=>'PostsController@store'
 ]) !!}
 
     <div class="form-group">
@@ -37,7 +37,9 @@ Add Post v2 (using Laravel collective package)
 
    <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-   <button type="submit" class="btn btn-primary">Submit</button>
+   {!! Form::submit('Create Post',['class'=>'btn btn-primary']) !!}
+
+   {{--<button type="submit" class="btn btn-primary">Submit</button>--}}
 
 
 {!! Form::close() !!}

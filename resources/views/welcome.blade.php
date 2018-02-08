@@ -79,13 +79,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                My First laravel.app1
+                http://laravel.app1/
                 </div>
 
 
 
                 <div class="links">
-                    <a href="all/">Posts</a>
+                    <a href="posts/">Posts</a>
+                    <a href="posts/create">create Post</a>
                     <a href="contact/">contact</a>
 
                 </div>

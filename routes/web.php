@@ -20,6 +20,11 @@ Route::get('/', function () {
 });
 //************************************************************************* */
 
+Route::get('/demo', function () {
+    return view('demo');
+});
+
+
 //crud use a resource
 Route::resource('/posts', 'PostsController');
 

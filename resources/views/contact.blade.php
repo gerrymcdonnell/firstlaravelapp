@@ -1,4 +1,6 @@
-@extends('layouts.app')
+;@extends('layouts.app')
+
+@section('layout.partials.header')
 
 
 @section('content')

@@ -12,10 +12,11 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($v)
+    public function index()
     {
         //
-        return "its working ".$v;
+        $posts=Post::all();
+        return view('posts.index',compact('posts'));
     }
 
     /**

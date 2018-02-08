@@ -24,6 +24,11 @@ Route::get('/demo', function () {
     return view('demo');
 });
 
+Route::get('/demo2', function () {
+    return view('demo2');
+});
+
+
 
 //crud use a resource
 Route::resource('/posts', 'PostsController');
@@ -209,11 +214,11 @@ Route::get('/insert', function () {
 
 
 //contact route
-Route::get('/contact','PostsController@contact');
+//Route::get('/contact','PostsController@contact');
 
 //posts
 //http://localhost/firstlaravelapp/public/posts/qq
-Route::get('/post/{id}/{name}', 'PostsController@show_post');
+//Route::get('/post/{id}/{name}', 'PostsController@show_post');
 
 
 Route::get('/ged', function () {      

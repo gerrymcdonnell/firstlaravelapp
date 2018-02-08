@@ -6,14 +6,6 @@
 
         <div class="row">
 
-<h1>post page</h1>
-
-<h3>
-id: {{$id}}
-name: {{$name}}
-</h3>
-
-
         </div>
       </div>
     </div>

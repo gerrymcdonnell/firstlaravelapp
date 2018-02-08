@@ -8,7 +8,9 @@
 
  @include('layout.partials.nav')
 
-        @include('layout.partials.header')
+
+
+        @yield('header')
 
     <div class="container">
      @yield('content')

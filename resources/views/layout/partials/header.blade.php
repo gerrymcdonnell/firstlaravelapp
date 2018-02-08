@@ -8,3 +8,6 @@
 </p>
 </div>
 </section>
+
+<hr>
+        <p>views/layout/partials/footer.blade.php</p>

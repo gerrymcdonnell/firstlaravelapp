@@ -20,8 +20,14 @@ Add Post v2 (using Laravel collective package)
 {{--open form--}}
 {!! Form::open([
     'method'=>'post',
-    'action'=>'PostsController@store'
+    'action'=>'PostsController@store',
+    'files'=>true
 ]) !!}
+
+    <div class="form-group">
+        {!! Form::file('file',['class'=>'form-control']) !!}
+    </div>
+
 
     <div class="form-group">
         {!! Form::label('title','Title:') !!}

@@ -7,6 +7,7 @@
       <th>id</th>
       <th>title</th>
       <th>content</th>
+      <th>file</th>
       <th>created</th>
       <th>updated</th>
 
@@ -18,6 +19,7 @@
         <th scope='row'>{{$post->id}} </th>
             <td>{{$post->title}}</td>
             <td>{{$post->content}}</td>
+            <td>{{$post->path}}</td>
             <td>{{$post->created_at}}</td>
             <td>{{$post->updated_at}}</td>
         </tr>

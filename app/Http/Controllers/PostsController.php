@@ -54,12 +54,30 @@ class PostsController extends Controller
         return redirect('/posts');
     }
 
-    //use custom class to validate
+    //add post use custom class to validate
     public function store(CreatePostRequest $request)
     {
-        //create post
-        Post::create($request->all());
+        $input=$request->all();
+
+        if($file=$request->file('file')){
+            $name=$file->getClientOriginalName();
+
+            //will create an images folder in public folder
+            $file->move('images',$name);
+
+            $input['path']=$name;
+        }
+
+        Post::create($input);
+
         return redirect('/posts');
+
+        /*$file=$request->file('file');
+        echo $file->getClientOriginalName();*/
+
+        //create post orignal fucntion
+        /*Post::create($request->all());
+        return redirect('/posts');*/
     }
 
 

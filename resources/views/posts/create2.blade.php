@@ -24,6 +24,7 @@ Add Post v2 (using Laravel collective package)
     'files'=>true
 ]) !!}
 
+    <!--accept file -->
     <div class="form-group">
         {!! Form::file('file',['class'=>'form-control']) !!}
     </div>

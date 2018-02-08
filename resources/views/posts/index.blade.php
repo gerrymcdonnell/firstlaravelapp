@@ -18,6 +18,7 @@
         <th scope='row'>{{$post->id}} </th>
             <td>{{$post->title}}</td>
             <td>{{$post->content}}</td>
+            <td><a href="/posts/{{$post->id}}/edit">Edit </a</td>
         </tr>
 
     @endforeach

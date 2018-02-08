@@ -19,13 +19,19 @@
 
         <tr>
         <th scope='row'>{{$post->id}} </th>
-            <td>{{$post->title}}</td>
+
+            <td>
+            <a href="{{route('posts.show',$post->id)}}">
+            {{$post->title}}
+            </a>
+            </td>
             <td>{{$post->content}}</td>
             <td>{{$post->created_at}}</td>
             <td>{{$post->updated_at}}</td>
-            <td><a href="{{route('posts.edit',$post->id)}}">Edit </a></td>
 
-            <td><a href="/posts/{{$post->id}}/delete">delete </a></td>
+            <td><a href="{{route('posts.edit',$post->id)}}">Edit </a></td>
+            <td><a href="{{route('posts.edit',$post->id)}}">Delete </a></td>
+
         </tr>
 
     @endforeach

@@ -4,7 +4,7 @@
 
     <section class="jumbotron text-center">
     <div class="container">
-    <h1 class="jumbotron-heading">Post example</h1>
+    <h1 class="jumbotron-heading">Edit Post ID:{{$post->id}}</h1>
 
     </div>
     </section>

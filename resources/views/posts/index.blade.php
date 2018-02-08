@@ -23,7 +23,8 @@
             <td>{{$post->content}}</td>
             <td>{{$post->created_at}}</td>
             <td>{{$post->updated_at}}</td>
-            <td><a href="/posts/{{$post->id}}/edit">Edit </a></td>
+            <td><a href="{{route('posts.edit',$post->id)}}">Edit </a></td>
+
             <td><a href="/posts/{{$post->id}}/delete">delete </a></td>
         </tr>
 

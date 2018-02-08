@@ -39,6 +39,7 @@
     </form>
 <hr>
     Delete
+    <!--browser only recognises post and get -->
     <form method="post" action="/posts/{{$post->id}}">
         <input type="hidden" name="_method" value="delete">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">

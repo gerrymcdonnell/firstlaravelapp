@@ -26,8 +26,11 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //use the create view
-        return view('posts.create');
+        //use the create view html form version
+        //return view('posts.create');
+
+        //laravel collective ver
+        return view('posts.create2');
     }
 
     /**

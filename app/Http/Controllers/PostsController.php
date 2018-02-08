@@ -72,7 +72,7 @@ class PostsController extends Controller
     {
         //
         $post=Post::find($id);
-        return view('posts.edit',compact('post'));
+        return view('posts.edit2',compact('post'));
     }
 
     /**

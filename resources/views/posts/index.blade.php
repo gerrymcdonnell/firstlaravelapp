@@ -30,7 +30,7 @@
             <td>{{$post->created_at}}</td>
             <td>{{$post->updated_at}}</td>
 
-            <td><a href="{{route('posts.edit',$post->id)}}">Edit </a></td>
+            <td><a class="btn btn-primary" href="{{route('posts.edit',$post->id)}}">Edit </a></td>
 
 
             <td>
